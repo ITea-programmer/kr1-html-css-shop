@@ -73,9 +73,6 @@
       outline: 2px solid var(--color-primary);
       outline-offset: 3px;
     }
-    a:visited{
-      color: var(--color-success)
-    }
 
 /* ===============================
    4. Компоненты страницы
