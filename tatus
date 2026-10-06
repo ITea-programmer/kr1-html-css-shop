@@ -1,0 +1,27 @@
+*   [33md1a5708[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Merge pull request #6 from ITea-programmer/feature/multi-page-navigation
+[31m|[m[32m\[m  
+[31m|[m * [33m8c81c93[m[33m ([m[1;31morigin/feature/multi-page-navigation[m[33m, [m[1;32mfeature/multi-page-navigation[m[33m)[m feat: add multi-page structure navigation and anchors
+[31m|[m * [33m350c8e7[m refactor: delete  a:visited in CS-styles
+[31m|[m[31m/[m  
+*   [33m8e62669[m Merge pull request #5 from ITea-programmer/feature/css-architecture-states
+[33m|[m[34m\[m  
+[33m|[m * [33m91e005d[m[33m ([m[1;31morigin/feature/css-architecture-states[m[33m, [m[1;32mrefactor/bem-css-classes[m[33m, [m[1;32mfeature/css-architecture-states[m[33m)[m refactor: add a:visited in CS-styles
+* [34m|[m [33m48672a4[m Merge pull request #4 from ITea-programmer/feature/css-architecture-states
+[35m|[m[34m\[m[34m|[m 
+[35m|[m * [33m9e40032[m refactor: organize CSS variables and states
+[35m|[m[35m/[m  
+*   [33m266ee66[m Merge pull request #3 from ITea-programmer/feature/form-modal-validation
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m3965560[m[33m ([m[1;31morigin/feature/form-modal-validation[m[33m, [m[1;32mfeature/form-modal-validation[m[33m)[m feat: add order form modal and validation
+[1;31m|[m[1;31m/[m  
+*   [33mbbeccdf[m Merge pull request #2 from ITea-programmer/feature/html-css-start-page
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33mde17185[m[33m ([m[1;31morigin/feature/html-css-start-page[m[33m, [m[1;32mfeature/html-css-start-page[m[33m)[m feat: add semantic HTML structure and base CSS styles
+[1;33m|[m[1;33m/[m  
+* [33m1e2265f[m docs: add GitHub Pages link
+*   [33mab7b4a9[m Merge pull request #1 from ITea-programmer/feature/start-page
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m99f3268[m[33m ([m[1;31morigin/feature/start-page[m[33m, [m[1;32mfeature/start-page[m[33m)[m feat: add project description section
+[1;35m|[m[1;35m/[m  
+* [33m1c68a18[m docs: add project status to README
+* [33mf0c9072[m feat: initialize frontend project structure
