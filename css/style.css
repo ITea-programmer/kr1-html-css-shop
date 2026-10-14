@@ -492,3 +492,188 @@ a:focus-visible {
 [id] {
   scroll-margin-top: 120px;
 }
+
+/* ===============================
+   16. Карточка книги, обложки, таблица
+   =============================== */
+
+.product-detail {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.product-detail__info {
+  position: relative;
+}
+
+.product-detail__price {
+  font-size: 24px;
+  font-weight: 700;
+  margin: var(--space-md) 0;
+}
+
+.product-detail__button {
+  margin-right: var(--space-sm);
+}
+
+.product-detail__image {
+  display: flex;
+  justify-content: center;
+}
+
+/* Обложки книг (CSS-градиенты по разделам математики) */
+.book-cover {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 2 / 3;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover__author {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.book-cover__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Градиенты по разделам математики */
+.book-cover--analysis    { background: linear-gradient(135deg, #1e3a8a, #7c3aed); }
+.book-cover--algebra     { background: linear-gradient(135deg, #7c2d12, #f59e0b); }
+.book-cover--discrete    { background: linear-gradient(135deg, #064e3b, #10b981); }
+.book-cover--probability { background: linear-gradient(135deg, #831843, #ec4899); }
+.book-cover--numerical   { background: linear-gradient(135deg, #1e293b, #64748b); }
+.book-cover--ode         { background: linear-gradient(135deg, #4c1d95, #a855f7); }
+.book-cover--functional  { background: linear-gradient(135deg, #7f1d1d, #dc2626); }
+.book-cover--general     { background: linear-gradient(135deg, #0e7490, #06b6d4); }
+
+/* Таблица характеристик */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+}
+
+.product-table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--color-muted);
+}
+
+.product-table th,
+.product-table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.product-table th {
+  background-color: var(--color-surface);
+  font-weight: 700;
+}
+
+.product-table tr:hover {
+  background-color: var(--color-surface-accent);
+}
+
+/* Страница заказа */
+.order-page {
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+}
+
+/* ===============================
+   17. Логотип ВышRead
+   =============================== */
+
+.site-header__logo-accent {
+  color: var(--color-primary);
+}
+
+/* ===============================
+   18. Hero-текст
+   =============================== */
+
+.hero__title {
+  margin-top: 0;
+}
+
+.hero__text {
+  margin-bottom: var(--space-md);
+}
+
+/* ===============================
+   19. Бейдж на карточке (position: absolute)
+   =============================== */
+
+.product-card {
+  position: relative;
+}
+/* ===============================
+   20. Кнопка «Наверх» (position: fixed)
+   =============================== */
+
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 87, 184, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-top:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ===============================
+   21. Обложка книги — картинка
+   =============================== */
+
+.book-cover-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+

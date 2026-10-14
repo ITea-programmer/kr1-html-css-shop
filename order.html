@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заказа учебников по высшей математике — магазин ВышRead.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
+  <meta property="og:description" content="Учебный frontend-проект книжного магазина по высшей математике.">
+  <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
+  <title>Оформление заказа — ВышRead</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+        </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="order.html">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Оформление заказа</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Оформление заказа</h1>
+      <p class="section__text">
+        Заполните форму — мы свяжемся с вами для подтверждения заказа.
+      </p>
+    </section>
+
+    <section class="order-page">
+      <form class="order-form" action="#" method="post" novalidate>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-name">ФИО</label>
+          <input
+            class="order-form__input"
+            id="order-page-name"
+            name="name"
+            type="text"
+            placeholder="Иванов Иван Иванович"
+            minlength="2"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-email">E-mail</label>
+          <input
+            class="order-form__input"
+            id="order-page-email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-phone">Телефон</label>
+          <input
+            class="order-form__input"
+            id="order-page-phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="+7 (900) 000-00-00"
+            pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}"
+            required
+          >
+          <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-book">Книга</label>
+          <select
+            class="order-form__select"
+            id="order-page-book"
+            name="book"
+            required
+          >
+            <option value="">Выберите книгу</option>
+            <option value="demidovich">Демидович. Сборник задач — 1890 ₽</option>
+            <option value="fihtengolts">Фихтенгольц. Курс — 2490 ₽</option>
+            <option value="smirnov">Смирнов. Курс высшей математики — 1650 ₽</option>
+            <option value="gelfand">Гельфанд. Лекции по линейной алгебре — 990 ₽</option>
+            <option value="ilin">Ильин, Позняк. Курс линейной алгебры — 1250 ₽</option>
+            <option value="gnedenko">Гнеденко. Теория вероятностей — 1450 ₽</option>
+            <option value="novikov">Новиков. Дискретная математика — 1180 ₽</option>
+            <option value="samarsky">Самарский. Численные методы — 890 ₽</option>
+            <option value="arnold">Арнольд. Дифференциальные уравнения — 1320 ₽</option>
+            <option value="kolmogorov">Колмогоров, Фомин. Функциональный анализ — 1590 ₽</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-count">Количество</label>
+          <input
+            class="order-form__input"
+            id="order-page-count"
+            name="count"
+            type="number"
+            min="1"
+            max="10"
+            value="1"
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-delivery">Способ доставки</label>
+          <select
+            class="order-form__select"
+            id="order-page-delivery"
+            name="delivery"
+            required
+          >
+            <option value="">Выберите способ</option>
+            <option value="pickup">Самовывоз</option>
+            <option value="courier">Курьер по Москве</option>
+            <option value="post">Почта России</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-address">Адрес доставки</label>
+          <input
+            class="order-form__input"
+            id="order-page-address"
+            name="address"
+            type="text"
+            placeholder="Город, улица, дом, квартира"
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-comment">Комментарий</label>
+          <textarea
+            class="order-form__textarea"
+            id="order-page-comment"
+            name="comment"
+            rows="4"
+            placeholder="Укажите дополнительную информацию"
+          ></textarea>
+        </div>
+
+        <div class="order-form__field order-form__field--checkbox">
+          <label class="order-form__label order-form__label--checkbox">
+            <input
+              class="order-form__checkbox"
+              id="order-page-agreement"
+              name="agreement"
+              type="checkbox"
+              required
+            >
+            Я согласен на обработку персональных данных
+          </label>
+        </div>
+
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Отправить заказ</button>
+          <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
+    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>

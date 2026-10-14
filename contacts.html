@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
+  <meta name="description" content="Контакты магазина ВышRead — учебники по высшей математике.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
+  <meta property="og:description" content="Учебный frontend-проект книжного магазина по высшей математике.">
   <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
-  <title>Контакты — Учебный интернет-магазин</title>
+  <title>Контакты — ВышRead</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+      </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -31,7 +33,10 @@
             <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            <a class="site-nav__link" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Оформить заказ</a>
           </li>
         </ul>
       </nav>
@@ -47,28 +52,34 @@
     <section class="section">
       <h1 class="section__title">Контакты</h1>
       <p class="section__text">
-        Здесь размещается контактная информация учебного интернет-магазина.
+        Свяжитесь с магазином «ВышRead» — мы поможем подобрать учебники
+        по высшей математике и ответим на вопросы о доставке.
       </p>
 
       <ul class="contacts-list">
         <li class="contacts-list__item">Телефон: +7 (900) 000-00-00</li>
-        <li class="contacts-list__item">E-mail: info@example.com</li>
-        <li class="contacts-list__item">Адрес: г. Москва, учебный проект</li>
+        <li class="contacts-list__item">E-mail: info@vyshread.ru</li>
+        <li class="contacts-list__item">Адрес: г. Москва, ул. Учебная, д. 1</li>
+        <li class="contacts-list__item">Режим работы: пн–пт, 10:00–19:00</li>
       </ul>
     </section>
 
-    <section class="section" id="feedback">
-      <h2 class="section__title">Обратная связь</h2>
+    <section class="section">
+      <h2 class="section__title">Оформление заказа</h2>
       <p class="section__text">
-        Для отправки заявки используйте форму в модальном окне на главной странице.
+        Чтобы оформить заказ, перейдите на страницу оформления или
+        воспользуйтесь формой заявки в модальном окне на главной странице.
       </p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
+      <a class="button button--primary" href="order.html">Оформить заказ</a>
+      <a class="button button--secondary" href="index.html#contacts">Перейти к форме</a>
     </section>
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
 </body>
 </html>

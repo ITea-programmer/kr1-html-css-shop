@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Карточка учебника по высшей математике — магазин ВышRead.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
+  <meta property="og:description" content="Учебный frontend-проект книжного магазина по высшей математике.">
+  <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
+  <title>Демидович. Сборник задач — ВышRead</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Карточка книги</span>
+    </nav>
+
+    <section class="product-detail">
+      <article class="product-detail__info">
+        <h1 class="section__title">
+          Сборник задач по математическому анализу
+        </h1>
+        <p class="section__text">
+          Классический сборник задач по математическому анализу.
+          Используется студентами технических специальностей более 60 лет.
+          Содержит более 4000 задач с ответами.
+        </p>
+        <p class="product-detail__price">Цена: 1890 руб.</p>
+
+        <a class="button button--primary product-detail__button" href="order.html">
+          Оформить заказ
+        </a>
+        <a class="button button--secondary" href="catalog.html">
+          Вернуться в каталог
+        </a>
+      </article>
+
+      <aside class="product-detail__image">
+        <img
+          class="book-cover-image"
+          src="images/books/demidovich.jpg"
+          alt="Обложка книги «Сборник задач по математическому анализу» — Б. П. Демидович"
+          width="280"
+          height="420"
+        >
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Характеристики книги</h2>
+
+      <table class="product-table">
+        <caption>Технические характеристики учебника</caption>
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Автор</td>
+            <td>Б. П. Демидович</td>
+          </tr>
+          <tr>
+            <td>Название</td>
+            <td>Сборник задач по математическому анализу</td>
+          </tr>
+          <tr>
+            <td>Раздел</td>
+            <td>Математический анализ</td>
+          </tr>
+          <tr>
+            <td>Издательство</td>
+            <td>АСТ</td>
+          </tr>
+          <tr>
+            <td>Год издания</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td>ISBN</td>
+            <td>978-5-17-135678-9</td>
+          </tr>
+          <tr>
+            <td>Страниц</td>
+            <td>624</td>
+          </tr>
+          <tr>
+            <td>Переплёт</td>
+            <td>Твёрдый</td>
+          </tr>
+          <tr>
+            <td>Уровень</td>
+            <td>Бакалавриат</td>
+          </tr>
+          <tr>
+            <td>Наличие</td>
+            <td>В наличии</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Похожие книги</h2>
+
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Курс дифференциального и интегрального исчисления</h3>
+          <p class="product-card__description">Г. М. Фихтенгольц</p>
+          <p class="product-card__price">Цена: 2490 руб.</p>
+          <a class="button product-card__button" href="product.html?id=fihtengolts">Подробнее</a>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Курс высшей математики</h3>
+          <p class="product-card__description">В. И. Смирнов</p>
+          <p class="product-card__price">Цена: 1650 руб.</p>
+          <a class="button product-card__button" href="product.html?id=smirnov">Подробнее</a>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Лекции по линейной алгебре</h3>
+          <p class="product-card__description">И. М. Гельфанд</p>
+          <p class="product-card__price">Цена: 990 руб.</p>
+          <a class="button product-card__button" href="product.html?id=gelfand">Подробнее</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
+    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>
