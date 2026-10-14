@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина.">
+  <meta name="description" content="ВышRead — учебный интернет-магазин учебников по высшей математике.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
   <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
   <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
 
-  <title>Учебный интернет-магазин</title>
+  <title>ВышRead — учебники по высшей математике</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+      </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -37,9 +40,10 @@
             </a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">
-              Обратная связь
-            </a>
+            <a class="site-nav__link" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Оформить заказ</a>
           </li>
         </ul>
       </nav>
@@ -48,83 +52,63 @@
 
   <main>
     <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
+      <h1 class="hero__title">ВышRead — учебники по высшей математике</h1>
+      <p class="hero__text">
+        Классические и современные учебники по математическому анализу,
+        линейной алгебре, теории вероятностей и другим разделам высшей
+        математики. Доставка по России.
       </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+      <a class="button button--primary" href="#popular">Перейти к товарам</a>
     </section>
 
     <section class="section" id="advantages">
-      <h2>Преимущества проекта</h2>
-
+      <h2 class="section__title">Почему выбирают ВышRead</h2>
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+        <li>Только проверенные учебники от классиков и современных авторов;</li>
+        <li>Подбор литературы по разделам высшей математики;</li>
+        <li>Доставка по России — курьером, почтой или самовывозом;</li>
+        <li>Скидки на комплекты учебников и повторные заказы.</li>
       </ul>
     </section>
-
     <section class="section" id="popular">
-      <h2>Популярные товары</h2>
+      <h2 class="section__title">Популярные учебники</h2>
 
       <div class="products-grid">
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button
-            class="button product-card__button"
-            type="button"
-            data-product="Товар 1"
-          >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Сборник задач по математическому анализу</h3>
+          <p class="product-card__description">Б. П. Демидович</p>
+          <p class="product-card__price">Цена: 1890 руб.</p>
+          <a class="button product-card__button" href="product.html?id=demidovich">Подробнее</a>
         </article>
 
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1500 руб.</p>
-          <button
-            class="button product-card__button"
-            type="button"
-            data-product="Товар 2"
-          >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Курс дифференциального и интегрального исчисления</h3>
+          <p class="product-card__description">Г. М. Фихтенгольц</p>
+          <p class="product-card__price">Цена: 2490 руб.</p>
+          <a class="button product-card__button" href="product.html?id=fihtengolts">Подробнее</a>
         </article>
 
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button
-            class="button product-card__button"
-            type="button"
-            data-product="Товар 3"
-          >
-            Заказать
-          </button>
+          <h3 class="product-card__title">Курс высшей математики</h3>
+          <p class="product-card__description">В. И. Смирнов</p>
+          <p class="product-card__price">Цена: 1650 руб.</p>
+          <a class="button product-card__button" href="product.html?id=smirnov">Подробнее</a>
         </article>
       </div>
     </section>
-
     <aside class="aside-info">
       <h2 class="aside-info__title">Информация для студентов</h2>
       <p class="aside-info__text">
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
+        В магазине ВышRead представлены учебники для студентов технических
+        специальностей: математический анализ, линейная алгебра, теория
+        вероятностей, дискретная математика, дифференциальные уравнения
+        и другие разделы высшей математики.
       </p>
     </aside>
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
@@ -239,5 +223,6 @@
   <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
   </p>
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
 </body>
 </html>

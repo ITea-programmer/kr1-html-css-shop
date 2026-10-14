@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <meta name="description" content="Каталог учебников по высшей математике — магазин ВышRead.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
+  <meta property="og:description" content="Учебный frontend-проект книжного магазина по высшей математике.">
   <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <title>Каталог — ВышRead</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+      </a>
 
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
@@ -31,7 +33,10 @@
             <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            <a class="site-nav__link" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Оформить заказ</a>
           </li>
         </ul>
       </nav>
@@ -45,11 +50,10 @@
     </nav>
 
     <section class="section">
-      <h1 class="section__title">Каталог товаров</h1>
+      <h1 class="section__title">Каталог учебников</h1>
       <p class="section__text">
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
+        Учебники по высшей математике для студентов технических специальностей.
+        Используйте фильтры, чтобы подобрать литературу по разделу.
       </p>
     </section>
 
@@ -59,21 +63,36 @@
 
         <form class="filters-form" action="#" method="get">
           <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Категория</legend>
+            <legend class="filters-form__legend">Раздел математики</legend>
 
             <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="all">
-              Все товары
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="analysis">
+              Математический анализ
             </label>
 
             <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="popular">
-              Популярные
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="algebra">
+              Линейная алгебра
             </label>
 
             <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="new">
-              Новинки
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="probability">
+              Теория вероятностей
+            </label>
+
+            <label class="filters-form__label">
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="discrete">
+              Дискретная математика
+            </label>
+
+            <label class="filters-form__label">
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="numerical">
+              Численные методы
+            </label>
+
+            <label class="filters-form__label">
+              <input class="filters-form__checkbox" type="checkbox" name="category" value="ode">
+              Дифференциальные уравнения
             </label>
           </fieldset>
 
@@ -84,7 +103,7 @@
             <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
 
             <label class="filters-form__label" for="price-to">До</label>
-            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="3000">
           </fieldset>
 
           <button class="button button--primary" type="submit">Применить</button>
@@ -92,43 +111,88 @@
       </aside>
 
       <section class="catalog-products">
-        <h2 class="catalog-products__title">Список товаров</h2>
+        <h2 class="catalog-products__title">Список учебников</h2>
 
         <div class="products-grid">
           <article class="product-card product-card--featured">
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button product-card__button" href="index.html#popular">
-              Подробнее
-            </a>
+            <h3 class="product-card__title">Сборник задач по математическому анализу</h3>
+            <p class="product-card__description">Б. П. Демидович</p>
+            <p class="product-card__price">Цена: 1890 руб.</p>
+            <a class="button product-card__button" href="product.html?id=demidovich">Подробнее</a>
           </article>
 
           <article class="product-card product-card--featured">
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1500 руб.</p>
-            <a class="button product-card__button" href="index.html#popular">
-              Подробнее
-            </a>
+            <h3 class="product-card__title">Курс дифференциального и интегрального исчисления</h3>
+            <p class="product-card__description">Г. М. Фихтенгольц</p>
+            <p class="product-card__price">Цена: 2490 руб.</p>
+            <a class="button product-card__button" href="product.html?id=fihtengolts">Подробнее</a>
           </article>
 
           <article class="product-card product-card--featured">
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <a class="button product-card__button" href="index.html#popular">
-              Подробнее
-            </a>
+            <h3 class="product-card__title">Курс высшей математики</h3>
+            <p class="product-card__description">В. И. Смирнов</p>
+            <p class="product-card__price">Цена: 1650 руб.</p>
+            <a class="button product-card__button" href="product.html?id=smirnov">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Лекции по линейной алгебре</h3>
+            <p class="product-card__description">И. М. Гельфанд</p>
+            <p class="product-card__price">Цена: 990 руб.</p>
+            <a class="button product-card__button" href="product.html?id=gelfand">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Курс линейной алгебры и аналитической геометрии</h3>
+            <p class="product-card__description">В. А. Ильин, Э. Г. Позняк</p>
+            <p class="product-card__price">Цена: 1250 руб.</p>
+            <a class="button product-card__button" href="product.html?id=ilin">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Теория вероятностей</h3>
+            <p class="product-card__description">Б. В. Гнеденко</p>
+            <p class="product-card__price">Цена: 1450 руб.</p>
+            <a class="button product-card__button" href="product.html?id=gnedenko">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Дискретная математика для программистов</h3>
+            <p class="product-card__description">Ф. А. Новиков</p>
+            <p class="product-card__price">Цена: 1180 руб.</p>
+            <a class="button product-card__button" href="product.html?id=novikov">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Введение в численные методы</h3>
+            <p class="product-card__description">А. А. Самарский</p>
+            <p class="product-card__price">Цена: 890 руб.</p>
+            <a class="button product-card__button" href="product.html?id=samarsky">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Обыкновенные дифференциальные уравнения</h3>
+            <p class="product-card__description">В. И. Арнольд</p>
+            <p class="product-card__price">Цена: 1320 руб.</p>
+            <a class="button product-card__button" href="product.html?id=arnold">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">Функциональный анализ</h3>
+            <p class="product-card__description">А. Н. Колмогоров, С. В. Фомин</p>
+            <p class="product-card__price">Цена: 1590 руб.</p>
+            <a class="button product-card__button" href="product.html?id=kolmogorov">Подробнее</a>
           </article>
         </div>
       </section>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
 </body>
 </html>
