@@ -3,7 +3,11 @@
 // ===============================
 
 const orderDialog = document.getElementById('order-dialog');
-const orderButtons = document.querySelectorAll('.product-card__button');
+
+// Ищем ТОЛЬКО кнопки "Заказать", у которых есть атрибут data-product.
+// Ссылки "Подробнее" (у которых нет data-product) этот скрипт не тронет.
+const orderButtons = document.querySelectorAll('button[data-product]');
+
 const closeDialogButton = document.getElementById('close-order-dialog');
 const selectedProductInput = document.getElementById('selected-product');
 const orderForm = document.getElementById('order-form');
