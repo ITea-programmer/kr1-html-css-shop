@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Отзывы студентов о магазине ВышRead.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ВышRead — учебники по высшей математике">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://ITea-programmer.github.io/kr1-html-css-shop/images/icon_shop.png">
+  <title>Отзывы — ВышRead</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        Выш<span class="site-header__logo-accent">Read</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="reviews.html">Отзывы</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Карточка книги</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Отзывы</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Отзывы студентов</h1>
+      <p class="section__text">
+        Что говорят о магазине «ВышRead» те, кто уже заказал у нас учебники.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="products-grid">
+        <!-- Отзыв 1 -->
+        <article class="product-card">
+          <p class="product-card__description" style="font-style: italic; margin-bottom: 15px;">
+            «Сборник Демидовича спас меня на сессии! Очень подробные решения. Спасибо магазину за быструю доставку.»
+          </p>
+          <p class="product-card__title" style="font-size: 16px;">Анна К.</p>
+          <p class="product-card__price" style="font-size: 13px; font-weight: normal; margin-top: 5px; color: #a0a0a0;">Студентка МФТИ</p>
+        </article>
+
+        <!-- Отзыв 2 -->
+        <article class="product-card">
+          <p class="product-card__description" style="font-style: italic; margin-bottom: 15px;">
+            «Заказывал Фихтенгольца. Качество печати отличное, обложка твёрдая. Идеально для подготовки к экзаменам.»
+          </p>
+          <p class="product-card__title" style="font-size: 16px;">Игорь С.</p>
+          <p class="product-card__price" style="font-size: 13px; font-weight: normal; margin-top: 5px; color: #a0a0a0;">Студент ВШЭ</p>
+        </article>
+
+        <!-- Отзыв 3 -->
+        <article class="product-card">
+          <p class="product-card__description" style="font-style: italic; margin-bottom: 15px;">
+            «Удобный сайт, легко найти нужный раздел математики. Заказал сразу три книги, привезли на следующий день.»
+          </p>
+          <p class="product-card__title" style="font-size: 16px;">Мария Л.</p>
+          <p class="product-card__price" style="font-size: 13px; font-weight: normal; margin-top: 5px; color: #a0a0a0;">Студентка МГУ</p>
+        </article>
+        
+        <!-- Отзыв 4 -->
+        <article class="product-card">
+          <p class="product-card__description" style="font-style: italic; margin-bottom: 15px;">
+            «Очень удобно, что есть фильтры по разделам математики. Нашёл нужный учебник по дискретке за минуту.»
+          </p>
+          <p class="product-card__title" style="font-size: 16px;">Дмитрий В.</p>
+          <p class="product-card__price" style="font-size: 13px; font-weight: normal; margin-top: 5px; color: #a0a0a0;">Студент ИТМО</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 ВышRead. Все права защищены.</p>
+    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <a class="scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>

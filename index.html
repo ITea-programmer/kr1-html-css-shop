@@ -43,6 +43,9 @@
             <a class="site-nav__link" href="product.html">Карточка книги</a>
           </li>
           <li class="site-nav__item">
+            <a class="site-nav__link" href="reviews.html">Отзывы</a>
+          </li>
+          <li class="site-nav__item">
             <a class="site-nav__link" href="order.html">Оформить заказ</a>
           </li>
         </ul>
@@ -70,29 +73,50 @@
         <li>Скидки на комплекты учебников и повторные заказы.</li>
       </ul>
     </section>
-    <section class="section" id="popular">
+            <section class="section" id="popular">
       <h2 class="section__title">Популярные учебники</h2>
 
       <div class="products-grid">
+        <!-- Карточка 1: Демидович -->
         <article class="product-card product-card--featured">
+          <img class="product-card__image" src="images/books/demidovich.jpg" alt="Обложка: Сборник задач по математическому анализу">
+          
           <h3 class="product-card__title">Сборник задач по математическому анализу</h3>
           <p class="product-card__description">Б. П. Демидович</p>
           <p class="product-card__price">Цена: 1890 руб.</p>
-          <a class="button product-card__button" href="product.html?id=demidovich">Подробнее</a>
+          
+          <div class="product-card__actions">
+            <a class="button product-card__button" href="product.html?id=demidovich">Подробнее</a>
+            <button class="button product-card__button button--primary" type="button" data-product="Сборник задач по математическому анализу">Заказать</button>
+          </div>
         </article>
 
+        <!-- Карточка 2: Фихтенгольц -->
         <article class="product-card product-card--featured">
+          <img class="product-card__image" src="images/books/fihtengolts.jpg" alt="Обложка: Курс дифференциального и интегрального исчисления">
+          
           <h3 class="product-card__title">Курс дифференциального и интегрального исчисления</h3>
           <p class="product-card__description">Г. М. Фихтенгольц</p>
           <p class="product-card__price">Цена: 2490 руб.</p>
-          <a class="button product-card__button" href="product.html?id=fihtengolts">Подробнее</a>
+          
+          <div class="product-card__actions">
+            <a class="button product-card__button" href="product.html?id=fihtengolts">Подробнее</a>
+            <button class="button product-card__button button--primary" type="button" data-product="Курс дифференциального и интегрального исчисления">Заказать</button>
+          </div>
         </article>
 
+        <!-- Карточка 3: Смирнов -->
         <article class="product-card product-card--featured">
+          <img class="product-card__image" src="images/books/smirnov.jpg" alt="Обложка: Курс высшей математики">
+          
           <h3 class="product-card__title">Курс высшей математики</h3>
           <p class="product-card__description">В. И. Смирнов</p>
           <p class="product-card__price">Цена: 1650 руб.</p>
-          <a class="button product-card__button" href="product.html?id=smirnov">Подробнее</a>
+          
+          <div class="product-card__actions">
+            <a class="button product-card__button" href="product.html?id=smirnov">Подробнее</a>
+            <button class="button product-card__button button--primary" type="button" data-product="Курс высшей математики">Заказать</button>
+          </div>
         </article>
       </div>
     </section>

@@ -14,6 +14,8 @@
   --color-success: #168a2f;
   --color-success-bg: #eefaf0;
   --color-white: #ffffff;
+  --color-button: #c180ff;
+  --color-button-hover: #a855f7;
 
   --space-xs: 4px;
   --space-sm: 8px;
@@ -43,11 +45,40 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--color-white);
   padding-top: 100px;
+  
+  /* ВОТ ЗДЕСЬ МЕНЯЕМ БЕЛЫЙ ЦВЕТ НА ГРАДИЕНТ */
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+  
+  /* Фиксируем фон, чтобы он не скроллился */
+  background-attachment: fixed;
+  
+  position: relative;
+  z-index: 0;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: url('../images/math-bg.jpg');
+  background-size: 600px;
+  background-repeat: repeat;
+  
+  /* МАГИЯ: Инвертируем цвета (черный станет белым, а белый - черным) */
+  filter: invert(1);
+  
+  /* Делаем почти прозрачным, чтобы формулы были светло-серыми */
+  opacity: 0.3; 
+  
+  z-index: -1;
+  pointer-events: none;
+}
 /* ===============================
    3. Общие элементы интерфейса
    =============================== */
@@ -72,10 +103,33 @@ a:focus-visible {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
-  background-color: var(--color-surface-accent);
+  
+  /* Оставляем только градиент */
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+  
   border-radius: var(--radius-lg);
+  color: var(--color-white);
+  text-align: center;
 }
 
+
+/* 5. Чтобы текст и кнопка были ПОВЕРХ картинки, задаем им z-index */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Красим текст в белый */
+.hero__title {
+  color: var(--color-white);
+  margin-top: 0;
+}
+
+.hero__text {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-lg);
+  font-size: 18px;
+}
 .section {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -83,12 +137,17 @@ a:focus-visible {
 
 .section__title {
   margin-top: 0;
+  color: var(--color-white); /* Добавляем белый цвет */
 }
 
 .section__text {
   margin-bottom: var(--space-md);
+  color: var(--color-white); /* Добавляем белый цвет */
 }
 
+.advantages-list {
+  color: var(--color-white); /* Делаем список преимуществ белым */
+}
 /* ===============================
    5. Шапка и навигация
    =============================== */
@@ -157,9 +216,20 @@ a:focus-visible {
   flex-direction: column;
   gap: var(--space-sm);
   padding: var(--space-md);
-  border: 1px solid var(--color-border);
+  
+  /* Делаем рамку полупрозрачной белой */
+  border: 1px solid rgba(255, 255, 255, 0.3); 
   border-radius: var(--radius-md);
-  background-color: var(--color-bg);
+  
+  /* Фон карточки: белый*/
+  background-color: rgba(255, 255, 255); 
+  
+  /* Эффект матового стекла (размывает фон позади) */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /* Для Safari */
+  
+  /* Текст внутри карточки*/
+  color: var(--color-white); 
 }
 
 .product-card:hover {
@@ -176,26 +246,18 @@ a:focus-visible {
 
 .product-card__title {
   margin: 0;
-  color: var(--color-text);
+  color: var(--color-primary-dark);
 }
 
 .product-card__description {
   margin: 0;
-  color: var(--color-muted);
+  color: var(--color-primary);
 }
 
 .product-card__price {
   margin: 0;
   font-weight: 700;
-}
-
-.product-card--discount .product-card__price {
-  color: var(--color-danger);
-}
-
-.product-card__button {
-  margin-top: auto;
-  align-self: flex-start;
+  color: var(--color-primary);
 }
 
 .products-grid {
@@ -208,6 +270,7 @@ a:focus-visible {
    7. Кнопки
    =============================== */
 
+/* Единый стиль для всех кнопок */
 .button {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
@@ -216,30 +279,20 @@ a:focus-visible {
   font: inherit;
   text-decoration: none;
   cursor: pointer;
-}
-
-.button--primary {
+  
+  /* Твои правила */
+  background-color: var(--color-button);
   color: var(--color-white);
-  background-color: var(--color-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button--primary:hover {
-  background-color: var(--color-primary-dark);
-}
-
-.button--secondary {
-  color: var(--color-primary);
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-}
-
-.button--secondary:hover {
-  color: var(--color-white);
-  background-color: var(--color-primary);
+.button:hover {
+  background-color: var(--color-button-hover);
+  color: var(--color-muted);
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-white);
   outline-offset: 3px;
 }
 
@@ -340,18 +393,18 @@ a:focus-visible {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-md);
-  border-left: 4px solid var(--color-primary);
-  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-white); /* Белая полоска слева */
+  
+  /* Стеклянный эффект */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
-
-.aside-info__title {
-  margin-top: 0;
+.aside-info__title, .aside-info__text {
+  color: var(--color-white);
 }
-
-.aside-info__text {
-  margin-bottom: 0;
-}
-
 /* ===============================
    10. Сообщение об успехе
    =============================== */
@@ -418,10 +471,12 @@ a:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
+  color: var(--color-primary)
 }
 
 .catalog-filters__title {
   margin-top: 0;
+  color: var(--color-primary)
 }
 
 .catalog-products {
@@ -440,7 +495,7 @@ a:focus-visible {
 .filters-form__group {
   margin: 0;
   padding: var(--space-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
 }
 
@@ -461,7 +516,7 @@ a:focus-visible {
 .filters-form__input {
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
   font: inherit;
   margin-bottom: var(--space-sm);
@@ -573,7 +628,7 @@ a:focus-visible {
   text-align: left;
   font-weight: 700;
   margin-bottom: var(--space-sm);
-  color: var(--color-muted);
+  color: var(--color-white);
 }
 
 .product-table th,
@@ -644,7 +699,7 @@ a:focus-visible {
   width: 48px;
   height: 48px;
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
   border-radius: 50%;
   text-decoration: none;
   font-size: 22px;
@@ -654,7 +709,7 @@ a:focus-visible {
 }
 
 .scroll-top:hover {
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
   color: var(--color-white);
   transform: translateY(-2px);
 }
@@ -677,3 +732,29 @@ a:focus-visible {
   display: block;
 }
 
+/* ================================
+   22. Картинки в карточках товаров
+   ================================ */
+
+.product-card__image {
+  width: 100%;
+  max-width: 140px;
+  height: 200px; /* Задаем строгую высоту для всех картинок */
+  object-fit: contain; /* Картинка вписывается в рамки, не искажаясь */
+  margin: 0 auto var(--space-md);
+  transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на карточку: картинка чуть увеличивается */
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+}
+
+/* ================================
+   24. Стили для страницы отзывов
+   ================================ */
+
+/* Добавляем фиолетовую полоску слева для отзывов */
+.reviews-page .product-card {
+  border-left: 4px solid #7c3aed;
+}
